@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+</style>
+<script type="module" src="script.js"></script>
+<html lang="en">
+  <head>
+    <nav>
+      <div class="sped">
+        <a href="https://web-platform-j8yjdq.stackblitz.io" aria-current="page"
+          >Home</a
+        >
+      </div>
+      <a href="/">Proxy</a>
+      <a href="https://web-platform-j8yjdq.stackblitz.io/apps/apps.html"
+        >Apps</a
+      >
+      <a href="https://web-platform-j8yjdq.stackblitz.io/games/games.html"
+        >Games</a
+      >
+      <a onclick="openFullscreenIframe()">About:Blank</a>
+    </nav>
+    <title>Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <main>
+      <h1>The Power Of Play... Is Unstoppable!</h1>
+      <p>Games, Proxies, Apps, Whatever YOU Need</p>
+    </main>
+  </body>
+</html>
+<script>
+  function openFullscreenIframe() {
+    var iframe = document.createElement('iframe');
+    iframe.src = 'https://web-platform-j8yjdq.stackblitz.io';
+    iframe.style.width = '100%';
+    iframe.style.height = '100%';
+    iframe.style.position = 'fixed';
+    iframe.style.top = '0';
+    iframe.style.left = '0';
+    iframe.style.bottom = '0';
+    iframe.style.right = '0';
+    iframe.style.border = 'none';
+    var newTab = window.open('about:blank');
+    newTab.document.body.appendChild(iframe);
+  }
+</script>
