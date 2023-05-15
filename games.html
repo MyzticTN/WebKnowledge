@@ -39,18 +39,13 @@
       </div>
 
       <div class="roblox">
-        <a href="gfiles/roblox.html" target="_blank" alt="roblox">
-          <img src="img/roblox.png" />
+        <a href="gfiles/roblox.html" target="_blank">
+          <img src="img/roblox.png" data-search="roblox" />
         </a>
       </div>
-      <div class="roblox">
+      <div class="dude">
         <a href="gfiles/roblox.html" target="_blank">
-          <img src="img/cod.jpeg" />
-        </a>
-      </div>
-      <div class="roblox">
-        <a href="gfiles/roblox.html" target="_blank">
-          <img src="img/retrobowl.png" />
+          <img src="img/retrobowl.png" data-search="retrobowl"/>
         </a>
       </div>
       <div class="roblox">
@@ -106,7 +101,12 @@
   function filterImages(searchTerm) {
     const images = document.querySelectorAll('img');
     images.forEach(function (image) {
-      if (image.alt.toLowerCase().includes(searchTerm.toLowerCase())) {
+      const dataSearch = image.getAttribute('data-search');
+      if (
+        !searchTerm ||
+        (dataSearch &&
+          dataSearch.toLowerCase().includes(searchTerm.toLowerCase()))
+      ) {
         image.style.display = 'block';
       } else {
         image.style.display = 'none';
