@@ -101,10 +101,10 @@
   function filterImages(searchTerm) {
     const images = document.querySelectorAll('img');
     images.forEach(function (image) {
-      const dataSearch = image.dataset.search;
+      const dataSearch = image.getAttribute('data-search');
       if (
         dataSearch &&
-        dataSearch.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1
+        dataSearch.toLowerCase().includes(searchTerm.toLowerCase())
       ) {
         image.style.display = 'block';
       } else {
@@ -112,7 +112,8 @@
       }
     });
   }
-
+</script>
+<script>
   const searchBar = document.getElementById('search-bar');
   searchBar.addEventListener('input', function (event) {
     const searchTerm = event.target.value.trim();
