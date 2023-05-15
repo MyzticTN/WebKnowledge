@@ -45,7 +45,7 @@
       </div>
       <div class="dude">
         <a href="gfiles/roblox.html" target="_blank">
-          <img src="img/retrobowl.png" data-search="retrobowl"/>
+          <img src="img/retrobowl.png" data-search="retrobowl" />
         </a>
       </div>
       <div class="roblox">
@@ -99,16 +99,19 @@
 </script>
 <script>
   function filterImages(searchTerm) {
-  const images = document.querySelectorAll('img');
-  images.forEach(function (image) {
-    const searchAttribute = image.getAttribute('data-search');
-    if (searchAttribute && searchAttribute.toLowerCase().includes(searchTerm.toLowerCase())) {
-      image.style.display = 'block';
-    } else {
-      image.style.display = 'none';
-    }
-  });
-}
+    const images = document.querySelectorAll('img');
+    images.forEach(function (image) {
+      const dataSearch = image.getAttribute('data-search');
+      if (
+        dataSearch &&
+        dataSearch.toLowerCase().includes(searchTerm.toLowerCase())
+      ) {
+        image.style.display = 'block';
+      } else {
+        image.style.display = 'none';
+      }
+    });
+  }
 </script>
 <script>
   const searchBar = document.getElementById('search-bar');
