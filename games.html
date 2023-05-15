@@ -101,19 +101,15 @@
   function filterImages(searchTerm) {
     const images = document.querySelectorAll('img');
     images.forEach(function (image) {
-      const dataSearch = image.getAttribute('data-search');
-      if (
-        dataSearch &&
-        dataSearch.toLowerCase().includes(searchTerm.toLowerCase())
-      ) {
+      const dataSearch = image.dataset.search;
+      if (dataSearch && dataSearch.toLowerCase() === searchTerm.toLowerCase()) {
         image.style.display = 'block';
       } else {
         image.style.display = 'none';
       }
     });
   }
-</script>
-<script>
+
   const searchBar = document.getElementById('search-bar');
   searchBar.addEventListener('input', function (event) {
     const searchTerm = event.target.value.trim();
