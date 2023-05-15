@@ -99,20 +99,16 @@
 </script>
 <script>
   function filterImages(searchTerm) {
-    const images = document.querySelectorAll('img');
-    images.forEach(function (image) {
-      const dataSearch = image.getAttribute('data-search');
-      if (
-        !searchTerm ||
-        (dataSearch &&
-          dataSearch.toLowerCase().includes(searchTerm.toLowerCase()))
-      ) {
-        image.style.display = 'block';
-      } else {
-        image.style.display = 'none';
-      }
-    });
-  }
+  const images = document.querySelectorAll('img');
+  images.forEach(function (image) {
+    const searchAttribute = image.getAttribute('data-search');
+    if (searchAttribute && searchAttribute.toLowerCase().includes(searchTerm.toLowerCase())) {
+      image.style.display = 'block';
+    } else {
+      image.style.display = 'none';
+    }
+  });
+}
 </script>
 <script>
   const searchBar = document.getElementById('search-bar');
