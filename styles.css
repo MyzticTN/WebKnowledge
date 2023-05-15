@@ -57,7 +57,9 @@ P {
   align-items: center;
 }
 .roblox {
-  float: left;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   padding-right: 7px;
   padding-top: 7px;
   padding-left: 10px;
