@@ -101,8 +101,9 @@
   function filterImages(searchTerm) {
     const images = document.querySelectorAll('img');
     images.forEach(function (image) {
-      const dataSearch = image.getAttribute('data-search');
+      const dataSearch = image.dataset.search;
       if (
+        searchTerm &&
         dataSearch &&
         dataSearch.toLowerCase().includes(searchTerm.toLowerCase())
       ) {
@@ -111,6 +112,11 @@
         image.style.display = 'none';
       }
     });
+    if (!searchTerm) {
+      images.forEach(function (image) {
+        image.style.display = 'block';
+      });
+    }
   }
 </script>
 <script>
