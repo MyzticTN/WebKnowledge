@@ -102,7 +102,10 @@
     const images = document.querySelectorAll('img');
     images.forEach(function (image) {
       const dataSearch = image.dataset.search;
-      if (dataSearch && dataSearch.toLowerCase() === searchTerm.toLowerCase()) {
+      if (
+        dataSearch &&
+        dataSearch.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1
+      ) {
         image.style.display = 'block';
       } else {
         image.style.display = 'none';
