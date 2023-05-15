@@ -51,4 +51,8 @@ P {
   justify-content: center;
   align-items: center;
 }
-
+.gamesearch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

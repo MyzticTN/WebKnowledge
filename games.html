@@ -28,8 +28,18 @@
   </head>
   <body>
     <main>
+      <div class="gamesearch">
+        <label for="search-bar">Search:</label>
+        <input
+          type="text"
+          id="search-bar"
+          name="search-bar"
+          placeholder="Search images..."
+        />
+      </div>
+
       <div class="roblox">
-        <a href="gfiles/roblox.html" target="_blank">
+        <a href="gfiles/roblox.html" target="_blank" alt="roblox">
           <img src="img/roblox.png" />
         </a>
       </div>
@@ -39,9 +49,40 @@
         </a>
       </div>
       <div class="roblox">
-      <a href="gfiles/roblox.html" target="_blank">
-        <img src="img/retrobowl.png" />
-      </a>
+        <a href="gfiles/roblox.html" target="_blank">
+          <img src="img/retrobowl.png" />
+        </a>
+      </div>
+      <div class="roblox">
+        <a href="gfiles/roblox.html" target="_blank">
+          <img src="img/shell.jpg" />
+        </a>
+      </div>
+      <div class="roblox">
+        <a href="gfiles/roblox.html" target="_blank">
+          <img src="img/madgunz.jpg" />
+        </a>
+      </div>
+      <div class="roblox">
+        <a href="gfiles/roblox.html" target="_blank">
+          <img src="img/1v1.jpg" />
+        </a>
+      </div>
+      <div class="roblox">
+        <a href="gfiles/roblox.html" target="_blank">
+          <img src="img/blockpost.jpg" />
+        </a>
+      </div>
+      <div class="roblox">
+        <a href="gfiles/roblox.html" target="_blank">
+          <img src="img/taming.jpg" />
+        </a>
+      </div>
+      <div class="roblox">
+        <a href="gfiles/roblox.html" target="_blank">
+          <img src="img/venge.jpg" />
+        </a>
+      </div>
     </main>
   </body>
 </html>
@@ -60,4 +101,23 @@
     var newTab = window.open('about:blank');
     newTab.document.body.appendChild(iframe);
   }
+</script>
+<script>
+  function filterImages(searchTerm) {
+    const images = document.querySelectorAll('img');
+    images.forEach(function (image) {
+      if (image.alt.toLowerCase().includes(searchTerm.toLowerCase())) {
+        image.style.display = 'block';
+      } else {
+        image.style.display = 'none';
+      }
+    });
+  }
+</script>
+<script>
+  const searchBar = document.getElementById('search-bar');
+  searchBar.addEventListener('input', function (event) {
+    const searchTerm = event.target.value.trim();
+    filterImages(searchTerm);
+  });
 </script>
