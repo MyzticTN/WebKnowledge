@@ -354,37 +354,26 @@ https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js
   }
 </script>
 <script>
-function filterImages(searchTerm) {
-  const images = document.querySelectorAll('.roblox');
-  images.forEach(function (image) {
-    const dataSearch = image.dataset.search;
-    if (
-      dataSearch &&
-      dataSearch.toLowerCase().includes(searchTerm.toLowerCase())
-    ) {
-      image.classList.add('searched');
-      image.style.display = 'block';
-    } else {
-      image.classList.remove('searched');
-      image.style.display = 'none';
-    }
-  });
-}
-
-const searchInput = document.querySelector('#searchInput');
-searchInput.addEventListener('input', function () {
-  const searchTerm = this.value;
-  filterImages(searchTerm);
-});
-
-</script>
 <script>
-  const searchBar = document.getElementById('search-bar');
-searchBar.addEventListener('input', function (event) {
-  const searchTerm = event.target.value.trim();
-  filterImages(searchTerm);
-});
+let searchBox = document.querySelector('#search-box');
+let images = document.querySelectorAll('.roblox');
+
+searchBox.oninput = () =>{
+   images.forEach(hide => hide.style.display = 'none');
+   let value = searchBox.value;
+   images.forEach(filter =>{
+      let title = filter.getAttribute('data-title');
+      if(value == title){
+         filter.style.display = 'block';
+      }
+      if(searchBox.value == ''){
+         filter.style.display = 'block';
+      }
+   });
+};
 </script>
+</script>
+
 <script>
 const backToTopButton = document.getElementById('back-to-top');
 
