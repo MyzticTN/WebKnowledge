@@ -64,7 +64,6 @@ P {
 }
 .drun {
   float: left;
-  padding-right: 3px;
+  padding-right: 0px;
   padding-top: 7px;
-  padding-left: 10px;
 }
