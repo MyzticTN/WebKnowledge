@@ -354,26 +354,19 @@ https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js
   }
 </script>
 <script>
-  function filterImages(searchTerm) {
-    const images = document.querySelectorAll('img');
-    images.forEach(function (image) {
-      const dataSearch = image.dataset.search;
-      if (
-        searchTerm &&
-        dataSearch &&
-        dataSearch.toLowerCase().includes(searchTerm.toLowerCase())
-      ) {
-        image.style.display = 'block';
-      } else {
-        image.style.display = 'none';
-      }
-    });
-    if (!searchTerm) {
-      images.forEach(function (image) {
-        image.style.display = 'block';
-      });
+  ffunction filterImages(searchTerm) {
+  const images = document.querySelectorAll('img');
+  images.forEach(function (image) {
+    const dataSearch = image.dataset.search;
+    if (dataSearch && dataSearch.toLowerCase().includes(searchTerm.toLowerCase())) {
+      image.classList.add('searched');
+      image.classList.remove('not-searched');
+    } else {
+      image.classList.add('not-searched');
+      image.classList.remove('searched');
     }
-  }
+  });
+}
 </script>
 <script>
   const searchBar = document.getElementById('search-bar');
