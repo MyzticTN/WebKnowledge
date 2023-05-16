@@ -354,25 +354,22 @@ https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js
   }
 </script>
 <script>
- function filterImages(searchTerm) {
-  const images = document.querySelectorAll('img');
+function filterImages(searchTerm) {
+  const images = document.querySelectorAll('.roblox');
   images.forEach(function (image) {
     const dataSearch = image.dataset.search;
     if (
       dataSearch &&
       dataSearch.toLowerCase().includes(searchTerm.toLowerCase())
     ) {
+      image.style.display = 'block';
       image.classList.add('searched');
     } else {
+      image.style.display = 'none';
       image.classList.remove('searched');
     }
   });
-  const hiddenImages = document.querySelectorAll('img:not(.searched)');
-  hiddenImages.forEach(function (hiddenImage) {
-    hiddenImage.remove();
-  });
 }
-
 </script>
 <script>
   const searchBar = document.getElementById('search-bar');
