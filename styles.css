@@ -7,7 +7,7 @@ body {
   font-family: 'Comfortaa', cursive;
   color: rgb(255, 255, 255);
   background-color: #17141d;
-  overflow: hidden; /* Hide scrollbars */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 
 nav {
@@ -71,31 +71,31 @@ P {
   padding-bottom: 200px;
 }
 .back-to-top {
-	position: fixed;
-	bottom: 2rem;
-	right: 2rem;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	background-color: #dc143c;
-	border-radius: 0.5rem;
-	padding: 0.5rem;
-	text-decoration: none;
-	transition: 0.2s ease-out;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #dc143c;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  text-decoration: none;
+  transition: 0.2s ease-out;
 }
 
 .back-to-top span {
-	color: #fff;
-	font-size: 3rem;
-	transition: 0.2s ease-out;
+  color: #fff;
+  font-size: 3rem;
+  transition: 0.2s ease-out;
 }
 
 .back-to-top:hover {
-	background-color: #be1a3b;
+  background-color: #be1a3b;
 }
 .back-to-top:hover span {
-	transform: translateY(-4px);
+  transform: translateY(-4px);
 }
 html {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
