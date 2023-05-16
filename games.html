@@ -363,20 +363,19 @@ function filterImages(searchTerm) {
       dataSearch.toLowerCase().includes(searchTerm.toLowerCase())
     ) {
       image.classList.add('searched');
+      image.style.display = 'block';
     } else {
       image.classList.remove('searched');
-    }
-  });
-
-  const searchedImages = document.querySelectorAll('.searched');
-  images.forEach(function (image) {
-    if (!searchedImages.includes(image)) {
       image.style.display = 'none';
-    } else {
-      image.style.display = 'block';
     }
   });
 }
+
+const searchInput = document.querySelector('#searchInput');
+searchInput.addEventListener('input', function () {
+  const searchTerm = this.value;
+  filterImages(searchTerm);
+});
 
 </script>
 <script>
