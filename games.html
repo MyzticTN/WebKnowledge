@@ -362,12 +362,18 @@ function filterImages(searchTerm) {
       dataSearch &&
       dataSearch.toLowerCase().includes(searchTerm.toLowerCase())
     ) {
-      image.style.display = 'block';
       image.classList.add('searched');
     } else {
-      image.style.display = 'none';
       image.classList.remove('searched');
+      image.style.display = 'none';
     }
+  });
+}
+
+function showAllImages() {
+  const images = document.querySelectorAll('.roblox');
+  images.forEach(function (image) {
+    image.style.display = 'block';
   });
 }
 </script>
