@@ -46,16 +46,16 @@ main {
 }
 
 h1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 P {
   position: absolute;
-    top: 56%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  top: 56%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .gamesearch {
   display: flex;
@@ -152,7 +152,7 @@ html {
 }
 
 .searched {
-  position: absolute;
+  position: relative;
   float: left;
   left: 10px;
   top: 0;
