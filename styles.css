@@ -147,3 +147,13 @@ html {
 .count-particles {
   border-radius: 0 0 3px 3px;
 }
+.not-searched {
+  display: none;
+}
+
+.searched {
+  position: absolute;
+  float: left;
+  left: 10px;
+  top: 0;
+}
