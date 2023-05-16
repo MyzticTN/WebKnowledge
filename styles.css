@@ -7,6 +7,7 @@ body {
   font-family: 'Comfortaa', cursive;
   color: rgb(255, 255, 255);
   background-color: #17141d;
+  overflow: hidden; /* Hide scrollbars */
 }
 
 nav {
