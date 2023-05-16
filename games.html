@@ -32,6 +32,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
   </head>
   <body>
+    <button id="back-to-top" title="Back to top">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M12 0l8 9h-6v15h-4v-15h-6z"/>
+      </svg>
+    </button>    
     <main>
       <div class="gamesearch">
         <form class="flex items-center">
@@ -308,3 +313,18 @@
     filterImages(searchTerm);
   });
 </script>
+<script>
+const backToTopButton = document.getElementById('back-to-top');
+
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 100) {
+      backToTopButton.style.display = 'block';
+    } else {
+      backToTopButton.style.display = 'none';
+    }
+  });
+  
+  backToTopButton.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>  
