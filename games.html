@@ -365,17 +365,19 @@ function filterImages(searchTerm) {
       image.classList.add('searched');
     } else {
       image.classList.remove('searched');
+    }
+  });
+
+  const searchedImages = document.querySelectorAll('.searched');
+  images.forEach(function (image) {
+    if (!searchedImages.includes(image)) {
       image.style.display = 'none';
+    } else {
+      image.style.display = 'block';
     }
   });
 }
 
-function showAllImages() {
-  const images = document.querySelectorAll('.roblox');
-  images.forEach(function (image) {
-    image.style.display = 'block';
-  });
-}
 </script>
 <script>
   const searchBar = document.getElementById('search-bar');
