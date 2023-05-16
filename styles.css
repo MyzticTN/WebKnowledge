@@ -152,8 +152,5 @@ html {
 }
 
 .searched {
-  position: relative;
-  float: left;
-  left: 10px;
-  top: 0;
+  display: block;
 }
