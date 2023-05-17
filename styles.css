@@ -7,13 +7,18 @@ body {
   font-family: 'Comfortaa', cursive;
   color: rgb(255, 255, 255);
   background-color: #17141d;
-  overflow-x: hidden; /* Hide horizontal scrollbar */
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  overflow-x: hidden;
+  /* Hide horizontal scrollbar */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
+
 body::-webkit-scrollbar {
   display: none;
 }
+
 nav {
   display: flex;
   flex-wrap: wrap;
@@ -51,6 +56,7 @@ h1 {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 P {
   position: absolute;
   top: 56%;
@@ -81,12 +87,15 @@ P {
 .back-to-top:hover {
   background-color: #be1a3b;
 }
+
 .back-to-top:hover span {
   transform: translateY(-4px);
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 #particles-js {
   height: 100%;
   width: 100%;
@@ -99,7 +108,11 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
-} /* ---- stats.js ---- */
+}
+
+on
+
+/* ---- stats.js ---- */
 .count-particles {
   background: #000022;
   position: absolute;
@@ -115,22 +128,27 @@ html {
   font-family: Helvetica, Arial, sans-serif;
   font-weight: bold;
 }
+
 .js-count-particles {
   font-size: 1.1em;
 }
+
 #stats,
 .count-particles {
   -webkit-user-select: none;
   margin-top: 5px;
   margin-left: 5px;
 }
+
 #stats {
   border-radius: 3px 3px 0 0;
   overflow: hidden;
 }
+
 .count-particles {
   border-radius: 0 0 3px 3px;
 }
+
 .not-searched {
   display: none;
 }
@@ -138,14 +156,14 @@ html {
 .searched {
   display: block;
 }
+
 .container {
-  padding: 25px 10%;
+
   text-align: center;
 }
 
 .container .heading {
-  font-size: 30px;
-  padding-bottom: 25px;
+
 }
 
 .container #search-box {
@@ -153,23 +171,24 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #17141d;
+  color: white;
 }
 
 .container .image-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
-  padding-top: 30px;
+  gap: 15px;
+  padding-top: 5px;
 }
 
 .container .image-container .image {
-  padding: 15px;
-  background-color: #fff;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+
+  background-color: #17141d;
   border: 2px solid #000;
-  width: 350px;
-  border-radius: 5px;
+  width: 150px;
+
   animation: fadeIn 0.2s linear;
 }
 
@@ -181,15 +200,15 @@ html {
 }
 
 .container .image-container .image img {
-  height: 250px;
-  width: 100%;
+  height: 150px;
+  width: 150px;
   object-fit: cover;
-  margin-bottom: 10px;
+
   border-radius: 5px;
 }
 
 .container .image-container .image h3 {
-  font-size: 20px;
+  
 }
 
 @media (max-width: 768px) {
@@ -202,16 +221,16 @@ html {
 }
 
 @media (max-width: 450px) {
-  .container {
-    padding: 25px 20px;
-  }
+  .container {}
 
   .container .image-container .image {
-    width: 100%;
+    width: 150px;
   }
 }
 
 .gamesearch {
+  padding-top: 30px;
+  padding-bottom: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
