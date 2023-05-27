@@ -98,57 +98,57 @@ https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js
         </div>
   
         <div class="image-container">
-          <div class="image" data-title="roblox">
+          <div class="image" data-title="fmovies">
             <a href="afiles/fmovies.html" target="_blank">
-              <img src="img/fmovies.jpg" />
+              <img src="app-img/fmovies.jpg" />
             </a>
             <h3>Fmovies</h3>
           </div>
 
           <div class="image-container">
-            <div class="image" data-title="roblox">
+            <div class="image" data-title="cloudtube">
               <a href="afiles/cloudtube.html" target="_blank">
-                <img src="img/cloudtube.jpg" />
+                <img src="app-img/cloudtube.jpg" />
               </a>
               <h3>CloudTube</h3>
             </div>
           
             <div class="image-container">
-              <div class="image" data-title="roblox">
+              <div class="image" data-title="youtube">
                 <a href="afiles/youtube.html" target="_blank">
-                  <img src="img/youtube.jpg" />
+                  <img src="app-img/youtube.jpg" />
                 </a>
                 <h3>Youtube</h3>
               </div>
 
               <div class="image-container">
-                <div class="image" data-title="roblox">
+                <div class="image" data-title="instagram">
                   <a href="afiles/instagram.html" target="_blank">
-                    <img src="img/instagram.jpg" />
+                    <img src="app-img/instagram.jpg" />
                   </a>
                   <h3>Instagram</h3>
                 </div>
 
                 <div class="image-container">
-                  <div class="image" data-title="roblox">
+                  <div class="image" data-title="tiktok">
                     <a href="afiles/tiktok.html" target="_blank">
-                      <img src="img/tiktok.jpg" />
+                      <img src="app-img/tiktok.jpg" />
                     </a>
                     <h3>TikTok</h3>
                   </div>
 
                   <div class="image-container">
-                    <div class="image" data-title="roblox">
+                    <div class="image" data-title="reddit">
                       <a href="afiles/reddit.html" target="_blank">
-                        <img src="img/reddit.jpg" />
+                        <img src="app-img/reddit.jpg" />
                       </a>
                       <h3>Reddit</h3>
                     </div>
 
                     <div class="image-container">
-                      <div class="image" data-title="roblox">
+                      <div class="image" data-title="google">
                         <a href="afiles/google.html" target="_blank">
-                          <img src="img/google.jpg" />
+                          <img src="app-img/google.jpg" />
                         </a>
                         <h3>Google</h3>
                       </div>
@@ -173,3 +173,23 @@ https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js
   }
 </script>
 <div id="particles-js"></div>
+<script>
+  let searchBox = document.querySelector('#search-box');
+  let images = document.querySelectorAll(
+    '.container .image-container .image'
+  );
+
+  searchBox.oninput = () => {
+    images.forEach((hide) => (hide.style.display = 'none'));
+    let value = searchBox.value;
+    images.forEach((filter) => {
+      let title = filter.getAttribute('data-title');
+      if (title.toLowerCase().includes(value.toLowerCase())) {
+        filter.style.display = 'block';
+      }
+      if (searchBox.value == '') {
+        filter.style.display = 'block';
+      }
+    });
+  };
+</script>
